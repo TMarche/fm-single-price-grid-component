@@ -1,0 +1,162 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Custom properties -- update these for your own design */
+
+:root {
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
+
+    --fw-reg: 300;
+    --fw-bold: 600;
+
+    --clr-light: #fff;
+    --clr-dark: #e3edf4;
+    --clr-text-accent: #999;
+    --clr-accent1: #2bb3b1;
+    --clr-accent2: #4abebd;
+    --clr-accent3: #bfdf32;
+
+    --fs-h1: 1.2rem;
+    --fs-h2: 1.2rem;
+    --fs-h3: 1rem;
+    --fs-body: .8rem;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+          0.125em 0.125em 0.25em rgba(0,0,0,.15);
+}
+
+@media (min-width: 600px) {
+    :root {
+        --fs-h1: 1.75rem;
+        --fs-h2: 1.25rem;
+        --fs-h3: 1rem;
+        --fs-body: .9rem;
+    }
+}
+
+/* General Styles */
+
+.content {
+    margin: 1em;
+    background-color: var(--clr-light);
+    border-radius: 10px;
+    box-shadow: var(--bs)
+}
+
+body {
+    background: var(--clr-dark);
+    color: var(--clr-text-accent);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+    line-height: 1;
+    margin: 0;
+}
+
+h1 { font-size: var(--fs-h1)}
+h2 { font-size: var(--fs-h2)}
+h3 { font-size: var(--fs-h3)}
+
+
+.section__title--intro{
+    color: var(--clr-accent1);
+}
+
+.section__subtitle--intro {
+    color: var(--clr-accent3);
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-bold);
+}
+
+.section__content--intro {
+    color: var(--clr-text-accent);
+}
+
+.section__title {
+    margin-bottom: .25em;
+}
+
+.section__title--intro {
+    font-weight: var(--fw-reg);
+}
+
+.section__subtitle {
+    margin: 0;
+    font-size: var(--fs-h3);
+}
+
+.subscription {
+    color: white;
+}
+
+.why {
+    color: white;
+}
+
+.why__item {
+    opacity: 50%;
+}
+
+/* Layout*/
+
+@media (min-width: 600px) {
+    .content {
+        display: grid;
+        grid-template-areas:
+            "intro intro"
+            "sub why"
+    }
+
+    .intro {
+        grid-area: intro;
+    }
+
+    .subscription {
+        grid-area: sub;
+    }
+
+    .why {
+        grid-area: why;
+    }
+}
+
+/* Content */
+
+/* Intro Section */
+.intro {
+    padding: 3em;
+}
+
+/* Subscriptions Section */
+.subscription {
+    padding: 3em;
+    background-color: var(--clr-accent1);
+}
+
+/* Why Section */
+.why {
+    padding: 3em;
+    padding-right: 5em;
+    background-color: var(--clr-accent2);
+}
+
+.list--why {
+    list-style-type: none;
+    padding:0;
+}
