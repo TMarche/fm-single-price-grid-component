@@ -7,11 +7,11 @@
 /* Custom properties -- update these for your own design */
 
 :root {
-    --ff-primary: 'Source Sans Pro', sans-serif;
-    --ff-secondary: 'Source Code Pro', monospace;
+    --ff-primary: 'Karla', sans-serif;
+    --ff-secondary: 'Karla', monospace;
 
-    --fw-reg: 300;
-    --fw-bold: 600;
+    --fw-reg: 400;
+    --fw-bold: 700;
 
     --clr-light: #fff;
     --clr-dark: #e3edf4;
@@ -45,7 +45,14 @@
     margin: 1em;
     background-color: var(--clr-light);
     border-radius: 10px;
-    box-shadow: var(--bs)
+    box-shadow: var(--bs);
+}
+
+@media (min-width: 1200px) {
+    .content {
+        max-width: 1200px;
+        margin: 1em auto;
+    }
 }
 
 body {
@@ -88,18 +95,21 @@ h3 { font-size: var(--fs-h3)}
 
 .section__content--intro {
     color: var(--clr-text-accent);
+    font-weight: var(--fw-reg);
+    font-size: var(--fs-h3);
+    opacity: 75%;
 }
 
 .section__title {
     margin-bottom: .25em;
 }
 
-.section__title--intro {
-    font-weight: var(--fw-reg);
-}
-
 .section__subtitle {
     margin: 0;
+    font-size: var(--fs-h3);
+}
+
+.section__content--subscription {
     font-size: var(--fs-h3);
 }
 
@@ -113,6 +123,7 @@ h3 { font-size: var(--fs-h3)}
 
 .why__item {
     opacity: 50%;
+    font-size: var(--fs-h3)
 }
 
 @media (max-width: 600px) {
